@@ -364,3 +364,78 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
     discount: ""
   }
 ];
+
+export interface PropertyListing {
+  name: string;
+  title: string;
+  description: string;
+  price: number;
+  location: string;
+  images: string[];
+  amenities: string[];
+  host: {
+    name: string;
+    avatar: string;
+    rating: number;
+  };
+  rating: number;
+  reviewCount: number;
+}
+
+export const PROPERTYLISTINGSAMPLE: = [
+  {
+    name: "modern-apartment",
+    title: "Beautiful Modern Apartment",
+    description: "A stunning modern apartment in the heart of the city with all amenities. Perfect for couples and solo travelers.",
+    price: 120,
+    location: "New York, NY",
+    images: [
+      "/images/property1.jpg",
+      "/images/property2.jpg",
+      "/images/property3.jpg",
+    ],
+    amenities: ["Wifi", "Kitchen", "Air conditioning", "TV", "Essentials"],
+    host: {
+      name: "John Doe",
+      avatar: "/images/avatar.jpg",
+      rating: 4.8,
+    },
+    rating: 4.5,
+    reviewCount: 24,
+  },
+  {
+    name: "cozy-cabin",
+    title: "Cozy Mountain Cabin",
+    description: "Escape to this beautiful cabin in the mountains. Perfect for nature lovers and those seeking tranquility.",
+    price: 95,
+    location: "Aspen, CO",
+    images: [
+      "/images/cabin1.jpg",
+      "/images/cabin2.jpg",
+    ],
+    amenities: ["Wifi", "Kitchen", "Heating", "Fireplace", "Parking"],
+    host: {
+      name: "Sarah Wilson",
+      avatar: "/images/avatar2.jpg",
+      rating: 4.9,
+    },
+    rating: 4.7,
+    reviewCount: 18,
+  }
+];
+
+export const AMENITIES = [
+  'Wifi',
+  'Kitchen',
+  'Parking',
+  'Pool',
+  'Air conditioning',
+  'Heating',
+  'Washer',
+  'Dryer',
+  'TV',
+  'Essentials',
+] as const;
+
+export const MAX_GUESTS = 10;
+export const MIN_STAY = 1;
